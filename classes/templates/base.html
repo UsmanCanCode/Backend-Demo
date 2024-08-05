@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/styles.css" />
+    <title>QuattronKids</title>
+</head>
+<body>
+    <div style="text-align:center;">
+       
+        {% block content %}{% endblock %}
+        {% for message in get_flashed_messages() %}
+          <div>{{ message }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>

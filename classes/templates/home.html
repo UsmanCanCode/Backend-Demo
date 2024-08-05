@@ -1,0 +1,28 @@
+{% extends "Base.html" %}
+{% block content %}
+
+    <h1>Class Schedule</h1>
+    <button><a href="/create">Add Classes</a></button>
+    <br>
+    <br>
+    {% if classes|length < 1 %}
+        
+        <div>No Classes Scheduled. Please add classes!</div>
+    {% endif %}
+
+    {% for (class_name, instructor, date, time) in classes %}
+        <div>
+             <ul  style="display:inline-block;">
+                <li > <b>Class Name:</b> {{class_name}}</li>
+                <li> <b>Instructor Name:</b> {{instructor}}</li>
+                <li> <b>Date Scheduled:</b> {{date}}</li>
+                <li> <b>Time Scheduled:</b> {{time}}</li>
+             </ul>   
+        </div>
+    <br>
+    <br>
+    <hr style="width:50%">
+    {% endfor %}
+
+
+{% endblock %}
