@@ -1,17 +1,20 @@
 {% extends "Base.html" %}
 {% block content %}
 
-    <h1>Class Schedule</h1>
-    <button><a href="/create">Add Classes</a></button>
+    <h1  style="text-align: center;">Class Schedule</h1>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a href="/create" class="d-grid gap-2 col-6 mx-auto"><button type="button" class="btn btn-primary btn-lg">Add Classes</button></a>
+    </div>
     <br>
     <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
     {% if classes|length < 1 %}
         
         <div>No Classes Scheduled. Please add classes!</div>
     {% endif %}
 
     {% for (class_name, instructor, date, time) in classes %}
-        <div>
+        <div class="d-grid gap-2 col-6 mx-auto">
              <ul  style="display:inline-block;">
                 <li > <b>Class Name:</b> {{class_name}}</li>
                 <li> <b>Instructor Name:</b> {{instructor}}</li>
@@ -21,8 +24,8 @@
         </div>
     <br>
     <br>
-    <hr style="width:50%">
+    <hr  class="d-grid gap-2 col-6 mx-auto" style="width:50%">
     {% endfor %}
-
+    </div>    
 
 {% endblock %}

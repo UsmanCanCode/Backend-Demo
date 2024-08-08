@@ -1,42 +1,42 @@
 {% extends "Base.html" %}
 
 {% block content %}
-    <h1>Add New Classes to the Schedule</h1>
+    <h1 style="text-align: center;">Add New Classes to the Schedule</h1>
 
-    <form method="POST">
-        <div>
-            <label for="clase_name">
+    <form method="POST" class="container">
+        <div class="mb-3">
+            <label for="clase_name " class="form-label fs-3">
                 Class Name:
             </label>
-            <input type="text" id="class_name" name="class_name" placeholder="Enter class name"/>
+            <input class="form-control" type="text" id="class_name" name="class_name" placeholder="Enter class name"/>
         </div>
 
-        <div>
-            <label for="instructor">
+        <div class="mb-3">
+            <label for="instructor" class="form-label fs-3">
                 Instructor Name:
             </label>
-            <input type="text" id="instructor" name="instructor" placeholder="Enter instructor name"/>
+            <input class="form-control" type="text" id="instructor" name="instructor" placeholder="Enter instructor name"/>
         </div>
 
-        <div>
-            <label for="scheduled_date">
+        <div class="mb-3">
+            <label for="scheduled_date" class="form-label fs-3">
                 Date Scheduled:
             </label>
-            <input type="text" id="scheduled_date" name="scheduled_date" placeholder="Enter scheduled date"/>
+            <input class="form-control" type="text" id="scheduled_date" name="scheduled_date" placeholder="Enter scheduled date"/>
         </div>
 
-        <div>
-            <label for="scheduled_time">
+        <div class="mb-3">
+            <label for="scheduled_time" class="form-label fs-3">
                 Time Scheduled:
             </label>
-            <input type="text" id="scheduled_time" name="scheduled_time" placeholder="Enter scheduled time"/>
+            <input  class="form-control" type="text" id="scheduled_time" name="scheduled_time" placeholder="Enter scheduled time"/>
         </div>
         
-        <br/>
-
-        <button type="submit">
-            Submit
-        </button>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-primary btn-lg">
+                Submit
+            </button>
+        </div>
         
 
     </form>
